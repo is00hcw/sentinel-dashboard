@@ -12,4 +12,4 @@ RUN curl -fsSL -o /app.jar http://edas-public.oss-cn-hangzhou.aliyuncs.com/insta
 #ENV JAVA_OPTS=""
 
 
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom", "-Dcsp.sentinel.dashboard.server=localhost:8080", "-Dproject.name=sentinel-dashboard","-jar","/app.jar"]
