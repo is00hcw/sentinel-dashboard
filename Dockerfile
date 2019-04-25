@@ -6,7 +6,8 @@ RUN echo "Asia/shanghai" > /etc/timezone && \
 
 EXPOSE 8080
 VOLUME /tmp
-RUN curl -fsSL -o /app.jar http://edas-public.oss-cn-hangzhou.aliyuncs.com/install_package/demo/sentinel-dashboard.jar
+#RUN curl -fsSL -o /app.jar http://edas-public.oss-cn-hangzhou.aliyuncs.com/install_package/demo/sentinel-dashboard.jar
+RUN curl -fsSL -o /app.jar https://github.com/alibaba/Sentinel/releases/download/1.6.0/sentinel-dashboard-1.6.0.jar
 
 #RUN sh -c 'touch /app.jar'
 #ENV JAVA_OPTS=""
